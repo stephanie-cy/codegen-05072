@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: codegen-05072
+  janus-idp.io/tekton: codegen-05072
+  backstage.io/kubernetes-id: codegen-05072
+  backstage.io/kubernetes-namespace: codegen-05072 
+  app.kubernetes.io/part-of: codegen-05072
+resources: 
+#
+# - initialize-namespace.yaml
+#
+- deployment.yaml
+- route.yaml
+- service.yaml
