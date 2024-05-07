@@ -4,6 +4,12 @@ metadata:
   name: codegen-05072
   namespace: rhtap
   finalizers: ["resources-finalizer.argocd.argoproj.io"] 
+  labels:
+    rhtap/gitops: codegen-05072 
+    janus-idp.io/tekton: codegen-05072
+    backstage.io/kubernetes-id: codegen-05072
+    backstage.io/kubernetes-namespace: rhtap-app 
+    app.kubernetes.io/part-of: codegen-05072
 spec:
   project: default
   source:
